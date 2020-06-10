@@ -9,11 +9,13 @@ import com.baomidou.mybatisplus.extension.api.R;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.apache.commons.lang.StringUtils;
 import org.lele.common.dto.CommonResult;
 import org.lele.product.dto.request.CreateProductRequest;
 import org.lele.product.dto.request.QueryProductRequest;
 import org.lele.product.entity.ESProduct;
 import org.lele.product.entity.Product;
+import org.lele.product.exception.MallProductException;
 import org.lele.product.service.ProductService;
 import org.springframework.web.bind.annotation.*;
 import springfox.documentation.annotations.ApiIgnore;
@@ -30,7 +32,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("product")
-@Api(tags = "商品API")
+@Api(tags = "商品API",position = 4)
 public class ProductController extends ApiController {
     /**
      * 服务对象
@@ -40,35 +42,36 @@ public class ProductController extends ApiController {
 
 
     /**
-     * 通过主键查询单条数据
-     *
+     * 商品详情
      * @param id 主键
      * @return 单条数据
      */
     @GetMapping("{id}")
-    public R selectOne(@PathVariable Serializable id) {
-        return success(this.productService.getById(id));
+    public CommonResult selectOne(@PathVariable Serializable id) {
+        // TODO 计算热点商品，缓存到redis
+        return CommonResult.success(this.productService.getById(id));
     }
 
     /**
-     * 修改数据
-     *
+     * 更新商品
      * @param product 实体对象
      * @return 修改结果
      */
     @PutMapping
-    public CommonResult update(@RequestBody Product product) {
+    public CommonResult update(@RequestBody Product product) throws MallProductException{
+        // TODO 更新es
+        if( null == product.getId() ) { throw new MallProductException("商品id不能为空"); }
         return CommonResult.success(this.productService.updateById(product));
     }
 
     /**
      * 删除数据
-     *
      * @param idList 主键结合
      * @return 删除结果
      */
     @DeleteMapping
     public CommonResult delete(@RequestParam("idList") List<Long> idList) {
+        // TODO 删除es中商品
         return CommonResult.success(this.productService.removeByIds(idList));
     }
 
@@ -79,7 +82,7 @@ public class ProductController extends ApiController {
      * @param request 商品，包含规格参数
      * @return 新增结果
      */
-    @ApiOperation("新增商品，包含商品各种规格/价格/库存，注意新增后可能不能立刻查询到")
+    @ApiOperation("新增商品，包含商品各种规格/价格/库存，注意新增后1s内不能查询到")
     @PostMapping
     public CommonResult saveProduct(@RequestBody CreateProductRequest request ) {
         return CommonResult.success(this.productService.saveProduct(request));

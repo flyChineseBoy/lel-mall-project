@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.api.ApiController;
 import com.baomidou.mybatisplus.extension.api.R;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.lele.common.dto.CommonResult;
 import org.lele.product.entity.ProductClassAttr;
@@ -25,6 +26,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("productClassAttr")
+@Api(tags = "商品分类的属性",position = 2)
 public class ProductClassAttrController extends ApiController {
     /**
      * 服务对象

@@ -24,7 +24,7 @@ import java.util.List;
  * @author lele
  * @since 2020-05-07 20:53:46
  */
-@Api(tags = "权限资源")
+@Api(tags = "权限资源",position = 5)
 @RestController
 @RequestMapping("mPermission")
 public class MPermissionController extends ApiController {
@@ -47,17 +47,6 @@ public class MPermissionController extends ApiController {
         return CommonResult.success(this.mPermissionService.page(page, new QueryWrapper<>(mPermission)));
     }
 
-    /**
-     * 通过主键查询单条数据
-     *
-     * @param id 主键
-     * @return 单条数据
-     */
-    @GetMapping("{id}")
-    @ApiOperation(value = "根据id删除权限资源")
-    public CommonResult selectOne(@PathVariable Serializable id) {
-        return CommonResult.success(this.mPermissionService.getById(id));
-    }
 
     /**
      * 新增数据
@@ -71,16 +60,6 @@ public class MPermissionController extends ApiController {
         return CommonResult.success(this.mPermissionService.save(mPermission));
     }
 
-    /**
-     * 修改数据
-     *
-     * @param mPermission 实体对象
-     * @return 修改结果
-     */
-    @PutMapping
-    public CommonResult update(@RequestBody MPermission mPermission) {
-        return CommonResult.success(this.mPermissionService.updateById(mPermission));
-    }
 
     /**
      * 删除数据
@@ -89,6 +68,7 @@ public class MPermissionController extends ApiController {
      * @return 删除结果
      */
     @DeleteMapping
+    @ApiOperation(value = "删除一条权限资源")
     public CommonResult delete(@RequestParam("idList") List<Long> idList) {
         return CommonResult.success(this.mPermissionService.removeByIds(idList));
     }

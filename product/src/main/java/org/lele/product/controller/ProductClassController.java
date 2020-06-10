@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.api.ApiController;
 import com.baomidou.mybatisplus.extension.api.R;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.lele.common.dto.CommonResult;
 import org.lele.product.entity.ProductClass;
@@ -25,6 +26,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("productClass")
+@Api(tags = "商品分类",position = 1)
 public class ProductClassController extends ApiController {
     /**
      * 服务对象
@@ -46,19 +48,8 @@ public class ProductClassController extends ApiController {
     }
 
     /**
-     * 通过主键查询单条数据
-     *
-     * @param id 主键
-     * @return 单条数据
-     */
-    @GetMapping("{id}")
-    public CommonResult selectOne(@PathVariable Serializable id) {
-        return CommonResult.success(this.productClassService.getById(id));
-    }
-
-    /**
      * 新增数据
-     *
+     * TODO 约束：不可添加同名分类。
      * @param productClass 实体对象
      * @return 新增结果
      */
@@ -68,25 +59,16 @@ public class ProductClassController extends ApiController {
         return CommonResult.success(this.productClassService.save(productClass));
     }
 
-    /**
-     * 修改数据
-     *
-     * @param productClass 实体对象
-     * @return 修改结果
-     */
-    @PutMapping
-    public CommonResult update(@RequestBody ProductClass productClass) {
-        return CommonResult.success(this.productClassService.updateById(productClass));
-    }
 
     /**
      * 删除数据
-     *
+     * 约束：校验该商品分类必须没有产品才可以删除
      * @param idList 主键结合
      * @return 删除结果
      */
     @DeleteMapping
     public CommonResult delete(@RequestParam("idList") List<Long> idList) {
+        // TODO 校验该商品分类必须没有产品才可以删除
         return CommonResult.success(this.productClassService.removeByIds(idList));
     }
 }

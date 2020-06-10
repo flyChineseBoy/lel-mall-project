@@ -28,7 +28,7 @@ import java.util.Map;
  * @author lele
  * @since 2020-05-07 20:55:22
  */
-@Api(tags = "用户授予角色")
+@Api(tags = "用户授予角色",position = 2)
 @RestController
 @RequestMapping("mUserRole")
 public class MUserRoleController extends ApiController {
@@ -38,32 +38,9 @@ public class MUserRoleController extends ApiController {
     @Resource
     private MUserRoleService mUserRoleService;
 
-    /**
-     * 分页查询所有数据
-     *
-     * @param page 分页对象
-     * @param mUserRole 查询实体
-     * @return 所有数据
-     */
-    @GetMapping
-    public CommonResult selectAll(@ApiIgnore Page<MUserRole> page, MUserRole mUserRole) {
-        return CommonResult.success(this.mUserRoleService.page(page, new QueryWrapper<>(mUserRole)));
-    }
 
     /**
-     * 通过主键查询单条数据
-     *
-     * @param id 主键
-     * @return 单条数据
-     */
-    @GetMapping("{id}")
-    public CommonResult selectOne(@PathVariable Serializable id) {
-        return CommonResult.success(this.mUserRoleService.getById(id));
-    }
-
-    /**
-     * 新增数据
-     *
+     * 用户授予角色
      * @param mUserRole 实体对象
      * @return 新增结果
      */
@@ -73,16 +50,6 @@ public class MUserRoleController extends ApiController {
         return CommonResult.success(this.mUserRoleService.save(mUserRole));
     }
 
-    /**
-     * 修改数据
-     *
-     * @param mUserRole 实体对象
-     * @return 修改结果
-     */
-    @PutMapping
-    public CommonResult update(@RequestBody MUserRole mUserRole) {
-        return CommonResult.success(this.mUserRoleService.updateById(mUserRole));
-    }
 
     /**
      * 取消授权

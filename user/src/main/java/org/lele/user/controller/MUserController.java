@@ -26,7 +26,7 @@ import java.util.List;
  * @author lele
  * @since 2020-05-07 20:55:11
  */
-@Api(tags = "用户管理")
+@Api(tags = "用户管理",position = 1)
 @RestController
 @RequestMapping("mUser")
 public class MUserController extends ApiController {
@@ -81,6 +81,7 @@ public class MUserController extends ApiController {
      * @return 修改结果
      */
     @PutMapping
+    @ApiOperation(value = "更新一个用户")
     public CommonResult update(@RequestBody MUser mUser) {
         return CommonResult.success(this.mUserService.updateById(mUser));
     }
@@ -92,7 +93,7 @@ public class MUserController extends ApiController {
      * @return 删除结果
      */
     @DeleteMapping
-    @ApiOperation(value = "删除一个用户")
+    @ApiOperation(value = "批量删除用户")
     public CommonResult delete(@RequestParam("idList") List<Long> idList) {
         return CommonResult.success(this.mUserService.removeByIds(idList));
     }

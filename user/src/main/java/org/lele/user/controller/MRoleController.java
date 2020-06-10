@@ -24,7 +24,7 @@ import java.util.List;
  * @author lele
  * @since 2020-05-07 20:54:28
  */
-@Api(tags = "角色接口")
+@Api(tags = "角色接口",position = 3)
 @RestController
 @RequestMapping("mRole")
 public class MRoleController extends ApiController {
@@ -77,13 +77,13 @@ public class MRoleController extends ApiController {
      * @return 修改结果
      */
     @PutMapping
+    @ApiOperation(value = "更新角色信息")
     public CommonResult update(@RequestBody MRole mRole) {
         return CommonResult.success(this.mRoleService.updateById(mRole));
     }
 
     /**
-     * 删除数据
-     *
+     * 根据id批量删除角色
      * @param idList 主键结合
      * @return 删除结果
      */

@@ -4,8 +4,8 @@ package org.lele.product.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.api.ApiController;
-import com.baomidou.mybatisplus.extension.api.R;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.lele.common.dto.CommonResult;
 import org.lele.product.entity.ProductClassAttrValue;
@@ -25,6 +25,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("productClassAttrValue")
+@Api(tags = "商品分类属性对应的属性值",position = 3)
 public class ProductClassAttrValueController extends ApiController {
     /**
      * 服务对象
