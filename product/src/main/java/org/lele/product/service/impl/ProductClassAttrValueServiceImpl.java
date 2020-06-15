@@ -2,7 +2,7 @@ package org.lele.product.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.lele.product.dao.ProductClassAttrValueDao;
-import org.lele.product.entity.ProductClassAttrValue;
+import org.lele.common.entity.product.ProductClassAttrValue;
 import org.lele.product.service.ProductClassAttrValueService;
 import org.springframework.stereotype.Service;
 

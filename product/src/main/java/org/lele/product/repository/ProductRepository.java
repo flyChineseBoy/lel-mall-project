@@ -1,7 +1,6 @@
 package org.lele.product.repository;
 
-import org.lele.product.entity.ESProduct;
-import org.springframework.data.elasticsearch.repository.ElasticsearchCrudRepository;
+import org.lele.common.entity.product.ESProduct;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 import org.springframework.stereotype.Repository;
 

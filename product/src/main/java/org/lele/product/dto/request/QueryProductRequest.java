@@ -3,13 +3,9 @@ package org.lele.product.dto.request;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.lele.product.entity.Product;
-import org.lele.product.entity.ProductSpecs;
-
-import java.util.List;
+import org.lele.common.entity.product.Product;
 
 /**
  * org.lele.product.dto.request

@@ -2,24 +2,17 @@ package org.lele.user.controller;
 
 
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.api.ApiController;
-import com.baomidou.mybatisplus.extension.api.R;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.lele.common.dto.CommonResult;
-import org.lele.common.entity.MRolePermission;
-import org.lele.common.entity.MUserRole;
+import org.lele.common.entity.user.MUserRole;
 import org.lele.user.service.MUserRoleService;
 import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.*;
-import springfox.documentation.annotations.ApiIgnore;
 
 import javax.annotation.Resource;
-import java.io.Serializable;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**

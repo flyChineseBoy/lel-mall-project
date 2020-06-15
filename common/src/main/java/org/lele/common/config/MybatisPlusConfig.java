@@ -6,7 +6,7 @@ package org.lele.common.config;
  *  Mybatis、MybatisPlus配置文件
  */
 
-import org.lele.common.entity.MUser;
+import org.lele.common.entity.user.MUser;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ConfigurableApplicationContext;

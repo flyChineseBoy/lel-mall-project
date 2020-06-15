@@ -1,7 +1,7 @@
 package org.lele.authorization.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import org.lele.common.entity.MPermission;
+import org.lele.common.entity.user.MPermission;
 
 import java.util.List;
 

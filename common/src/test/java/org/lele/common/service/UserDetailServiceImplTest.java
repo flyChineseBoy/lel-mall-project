@@ -24,7 +24,7 @@ public class UserDetailServiceImplTest {
 
     @Test
     public void testLoadUserByUsername(){
-        System.out.println(JSONObject.toJSON(userDetailsService.loadUserByUsername("root")));
+//        System.out.println(JSONObject.toJSON(userDetailsService.loadUserByUsername("root")));
     }
 
 }

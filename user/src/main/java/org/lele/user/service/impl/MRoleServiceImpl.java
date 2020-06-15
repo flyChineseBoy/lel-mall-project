@@ -1,7 +1,7 @@
 package org.lele.user.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import org.lele.common.entity.MRole;
+import org.lele.common.entity.user.MRole;
 import org.lele.user.dao.MRoleDao;
 import org.lele.user.service.MRoleService;
 import org.springframework.stereotype.Service;

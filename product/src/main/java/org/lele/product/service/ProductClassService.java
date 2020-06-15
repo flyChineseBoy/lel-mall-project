@@ -1,7 +1,7 @@
 package org.lele.product.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import org.lele.product.entity.ProductClass;
+import org.lele.common.entity.product.ProductClass;
 
 public interface ProductClassService extends IService<ProductClass> {
 

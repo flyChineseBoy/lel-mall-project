@@ -2,9 +2,7 @@ package org.lele.user.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
-import org.lele.common.entity.MPermission;
-
-import java.util.List;
+import org.lele.common.entity.user.MPermission;
 
 /**
  * 权限表(MPermission)表数据库访问层

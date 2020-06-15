@@ -2,7 +2,7 @@ package org.lele.product.dao;
 
 import org.apache.ibatis.annotations.Mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.lele.product.entity.ProductClassAttrValue;
+import org.lele.common.entity.product.ProductClassAttrValue;
 
 /**
  * 类别属性值表，类别属性表的value(ProductClassAttrValue)表数据库访问层

@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.lele.common.dto.CommonResult;
-import org.lele.product.entity.ProductClassAttr;
+import org.lele.common.entity.product.ProductClassAttr;
 import org.lele.product.service.ProductClassAttrService;
 import org.springframework.web.bind.annotation.*;
 import springfox.documentation.annotations.ApiIgnore;

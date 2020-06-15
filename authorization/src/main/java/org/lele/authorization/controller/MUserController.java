@@ -2,22 +2,12 @@ package org.lele.authorization.controller;
 
 
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.api.ApiController;
-import com.baomidou.mybatisplus.extension.api.R;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
 import org.lele.authorization.service.MUserService;
-import org.lele.common.entity.MUser;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.lele.common.entity.user.MUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import springfox.documentation.annotations.ApiIgnore;
-
-import java.io.Serializable;
-import java.util.List;
 
 /**
  * 用户表(MUser)表控制层

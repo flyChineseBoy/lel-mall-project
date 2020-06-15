@@ -2,7 +2,7 @@ package org.lele.product.dao;
 
 import org.apache.ibatis.annotations.Mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.lele.product.entity.ProductSpecs;
+import org.lele.common.entity.product.ProductSpecs;
 
 /**
  * 商品规格表，记录sku数据和对应价格、库存数量(ProductSpecs)表数据库访问层

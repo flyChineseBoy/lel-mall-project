@@ -2,7 +2,7 @@ package org.lele.authorization.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
-import org.lele.common.entity.MUser;
+import org.lele.common.entity.user.MUser;
 
 /**
  * 用户表(MUser)表数据库访问层

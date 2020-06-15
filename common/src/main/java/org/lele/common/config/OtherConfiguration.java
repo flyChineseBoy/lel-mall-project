@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * @date: 2020-05-25
  */
 @Configuration
-@EnableFeignClients(basePackages = "org.lele.common.authorization")
+@EnableFeignClients(basePackages = "org.lele.*.feign.*")
 @EnableDiscoveryClient
 public class OtherConfiguration {
 }

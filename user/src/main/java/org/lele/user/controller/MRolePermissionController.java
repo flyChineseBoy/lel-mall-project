@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.extension.api.ApiController;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.lele.common.dto.CommonResult;
-import org.lele.common.entity.MRolePermission;
+import org.lele.common.entity.user.MRolePermission;
 import org.lele.user.service.MRolePermissionService;
 import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.*;

@@ -1,7 +1,7 @@
 package org.lele.product.utils.converts;
 
-import org.lele.product.entity.ESProduct;
-import org.lele.product.entity.Product;
+import org.lele.common.entity.product.ESProduct;
+import org.lele.common.entity.product.Product;
 import org.springframework.beans.BeanUtils;
 
 /**

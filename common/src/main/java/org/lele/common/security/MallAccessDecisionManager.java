@@ -42,7 +42,9 @@ public class MallAccessDecisionManager implements AccessDecisionManager {
         AntPathMatcher antPathMatcher = new AntPathMatcher();
 
         for (GrantedAuthority authority : authentication.getAuthorities()) {
-            // 字符串等于匹配 TODO  动态url
+            // TODO feign调用透传问题需要解决，这里暂时对匿名访问都放开
+            if( "ROLE_ANONYMOUS".equals(authority.getAuthority()) ) { return; }
+            // 字符串等于匹配
             if( authority.getAuthority().equals( requestUrl )) { return; }
             // ant匹配
             if( antPathMatcher.match(authority.getAuthority(),requestUrl) ) {return;}

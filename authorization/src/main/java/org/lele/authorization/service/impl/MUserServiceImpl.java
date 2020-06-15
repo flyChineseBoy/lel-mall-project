@@ -4,12 +4,9 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.apache.commons.lang3.StringUtils;
 import org.lele.authorization.dao.MUserDao;
 import org.lele.authorization.service.MUserService;
-import org.lele.common.entity.MUser;
+import org.lele.common.entity.user.MUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.HashMap;
-import java.util.List;
 
 /**
  * 用户表(MUser)表服务实现类

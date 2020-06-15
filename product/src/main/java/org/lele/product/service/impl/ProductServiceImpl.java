@@ -1,36 +1,29 @@
 package org.lele.product.service.impl;
 
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.apache.commons.lang3.StringUtils;
 import org.elasticsearch.index.query.BoolQueryBuilder;
-import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
-import org.elasticsearch.search.sort.SortBuilder;
 import org.elasticsearch.search.sort.SortBuilders;
 import org.elasticsearch.search.sort.SortOrder;
 import org.lele.product.dao.ProductDao;
 import org.lele.product.dao.ProductSpecsDao;
 import org.lele.product.dto.request.CreateProductRequest;
 import org.lele.product.dto.request.QueryProductRequest;
-import org.lele.product.entity.ESProduct;
-import org.lele.product.entity.Product;
+import org.lele.common.entity.product.ESProduct;
+import org.lele.common.entity.product.Product;
 import org.lele.product.repository.ProductRepository;
 import org.lele.product.service.ProductService;
 import org.lele.product.utils.converts.ESConverter;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.elasticsearch.core.query.NativeSearchQuery;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
-import org.springframework.data.elasticsearch.core.query.SearchQuery;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 /**
  * 商品表(Product)表服务实现类

@@ -2,7 +2,7 @@ package org.lele.authorization.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
-import org.lele.common.entity.MPermission;
+import org.lele.common.entity.user.MPermission;
 
 import java.util.List;
 

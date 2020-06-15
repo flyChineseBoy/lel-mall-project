@@ -6,7 +6,7 @@
         m_permission.description,m_permission.created,m_permission.updated
     </sql>
 
-    <select id="selectPermissionByUserId" parameterType="long" resultType="org.lele.common.entity.MPermission">
+    <select id="selectPermissionByUserId" parameterType="long" resultType="org.lele.common.entity.user.MPermission">
       SELECT
         <include refid="FIELDS" />
       FROM m_user_role

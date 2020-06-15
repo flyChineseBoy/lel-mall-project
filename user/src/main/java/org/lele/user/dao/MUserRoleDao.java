@@ -2,7 +2,7 @@ package org.lele.user.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
-import org.lele.common.entity.MUserRole;
+import org.lele.common.entity.user.MUserRole;
 
 /**
  * 用户角色表(MUserRole)表数据库访问层

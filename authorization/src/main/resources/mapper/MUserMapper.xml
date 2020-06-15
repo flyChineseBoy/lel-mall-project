@@ -5,7 +5,7 @@
         id,username,password,phone,created,updated
     </sql>
 
-    <select id="selectByUserName" parameterType="string" resultType="org.lele.common.entity.MUser">
+    <select id="selectByUserName" parameterType="string" resultType="org.lele.common.entity.user.MUser">
       SELECT
         <include refid="FIELDS" />
       FROM

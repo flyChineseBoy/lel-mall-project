@@ -5,10 +5,10 @@ package org.lele.common.security;/*
  */
 
 import com.alibaba.csp.sentinel.util.StringUtil;
-import org.lele.common.authorization.AuthorizationUserService;
+import org.lele.common.feign.authorization.AuthorizationUserService;
 import org.lele.common.dto.UserDTO;
-import org.lele.common.entity.MPermission;
-import org.lele.common.entity.MUser;
+import org.lele.common.entity.user.MPermission;
+import org.lele.common.entity.user.MUser;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;

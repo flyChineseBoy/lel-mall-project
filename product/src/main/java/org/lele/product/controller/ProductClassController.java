@@ -4,18 +4,16 @@ package org.lele.product.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.api.ApiController;
-import com.baomidou.mybatisplus.extension.api.R;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.lele.common.dto.CommonResult;
-import org.lele.product.entity.ProductClass;
+import org.lele.common.entity.product.ProductClass;
 import org.lele.product.service.ProductClassService;
 import org.springframework.web.bind.annotation.*;
 import springfox.documentation.annotations.ApiIgnore;
 
 import javax.annotation.Resource;
-import java.io.Serializable;
 import java.util.List;
 
 /**

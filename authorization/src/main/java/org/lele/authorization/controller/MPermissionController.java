@@ -2,19 +2,13 @@ package org.lele.authorization.controller;
 
 
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.api.ApiController;
-import com.baomidou.mybatisplus.extension.api.R;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
 import org.lele.authorization.service.MPermissionService;
-import org.lele.common.entity.MPermission;
+import org.lele.common.entity.user.MPermission;
 import org.springframework.web.bind.annotation.*;
-import springfox.documentation.annotations.ApiIgnore;
 
 import javax.annotation.Resource;
-import java.io.Serializable;
 import java.util.List;
 
 /**

@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
  * @author: lele
  * @date: 2020-05-08
  */
-@ComponentScan({"org.lele.common.authorization","org.lele.common.security"})
+@ComponentScan({"org.lele.common.feign.authorization","org.lele.common.security"})
 @Configuration
 public class BeanConfiguration {
 }

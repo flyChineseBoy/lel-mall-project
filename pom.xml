@@ -30,6 +30,7 @@
         <spring.cloud.alibaba.version>2.1.0.RELEASE</spring.cloud.alibaba.version>
         <spring.cloud.alibaba.sentinel.version>1.7.2</spring.cloud.alibaba.sentinel.version>
         <!--<spring.cloud.alibaba.feign.version>2.1.2.RELEASE</spring.cloud.alibaba.feign.version>-->
+        <rocketmq-spring-boot-starter.version>2.0.1</rocketmq-spring-boot-starter.version>
         <spring.redis>2.1.7.RELEASE</spring.redis>
         <swagger.version>2.7.0</swagger.version>
         <swagger-bootstrap-ui.version>1.8.1</swagger-bootstrap-ui.version>

@@ -2,7 +2,7 @@ package org.lele.product.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.lele.product.dao.ProductClassDao;
-import org.lele.product.entity.ProductClass;
+import org.lele.common.entity.product.ProductClass;
 import org.lele.product.service.ProductClassService;
 import org.springframework.stereotype.Service;
 

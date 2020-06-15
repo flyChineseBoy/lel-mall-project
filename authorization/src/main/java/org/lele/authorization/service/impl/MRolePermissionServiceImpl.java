@@ -3,7 +3,7 @@ package org.lele.authorization.service.impl;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.lele.authorization.dao.MRolePermissionDao;
 import org.lele.authorization.service.MRolePermissionService;
-import org.lele.common.entity.MRolePermission;
+import org.lele.common.entity.user.MRolePermission;
 import org.springframework.stereotype.Service;
 
 /**

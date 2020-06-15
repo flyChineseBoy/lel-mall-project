@@ -3,7 +3,7 @@ package org.lele.authorization.service.impl;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.lele.authorization.dao.MPermissionDao;
 import org.lele.authorization.service.MPermissionService;
-import org.lele.common.entity.MPermission;
+import org.lele.common.entity.user.MPermission;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

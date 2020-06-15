@@ -2,7 +2,7 @@ package org.lele.authorization.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
-import org.lele.common.entity.MRole;
+import org.lele.common.entity.user.MRole;
 
 /**
  * 角色表(MRole)表数据库访问层
