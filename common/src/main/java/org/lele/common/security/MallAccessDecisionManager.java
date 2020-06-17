@@ -43,7 +43,7 @@ public class MallAccessDecisionManager implements AccessDecisionManager {
 
         for (GrantedAuthority authority : authentication.getAuthorities()) {
             // TODO feign调用透传问题需要解决，这里暂时对匿名访问都放开
-            if( "ROLE_ANONYMOUS".equals(authority.getAuthority()) ) { return; }
+            /*if( "ROLE_ANONYMOUS".equals(authority.getAuthority()) ) { return; }*/
             // 字符串等于匹配
             if( authority.getAuthority().equals( requestUrl )) { return; }
             // ant匹配

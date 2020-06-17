@@ -64,7 +64,6 @@ public class CreateOrderProducer implements InitializingBean {
     @RocketMQTransactionListener(txProducerGroup = "tx_create_order")
     class CreateOrderTransactionListener implements RocketMQLocalTransactionListener {
 
-        //TODO 将mq消息转换为json字符串
         @Override
         public RocketMQLocalTransactionState executeLocalTransaction(Message message, Object o) {
             OrderDTO dto = JSONObject.parseObject( new String((byte[])message.getPayload()),OrderDTO.class );
